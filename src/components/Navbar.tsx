@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ArrowUpRight, Sun, Moon, MessageSquare } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sun, Moon, MessageSquare, Volume2, VolumeX } from 'lucide-react';
 import {
   getProfileImagePublicUrl,
   getProfileImageSignedUrl,
   isSupabaseConfigured,
 } from '../lib/supabase';
+import { useBackgroundMusic } from '../lib/audioManager';
 
 interface NavbarProps {
   activeSection: string;
@@ -18,6 +19,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [isImgLoaded, setIsImgLoaded] = useState(false);
   const [triedSignedFallback, setTriedSignedFallback] = useState(false);
   const [imgError, setImgError] = useState(false);
+
+  // Background music manager hook
+  const { isPlaying, toggle: toggleMusic } = useBackgroundMusic();
 
   useEffect(() => {
     if (!isSupabaseConfigured) return;
@@ -215,7 +219,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           })}
         </nav>
 
-        {/* Right Side: Get in Touch Button & Theme Toggle */}
+        {/* Right Side: Get in Touch Button, Music Toggle & Theme Toggle */}
         <div className="hidden sm:flex items-center gap-2.5">
           {/* Get in Touch Button */}
           <a
@@ -227,6 +231,29 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             <span>Get in Touch</span>
             <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
+
+          {/* Accessible Background Music Toggle */}
+          <button
+            type="button"
+            onClick={toggleMusic}
+            title={isPlaying ? 'Pause background music' : 'Play background music'}
+            aria-label={isPlaying ? 'Pause background music' : 'Play background music'}
+            className={`relative p-2.5 rounded-xl border transition-all cursor-pointer shadow-2xs active:scale-95 ${
+              isPlaying
+                ? 'bg-[#FAFAF8] dark:bg-[#1C1D21] text-emerald-600 dark:text-emerald-400 border-emerald-500/30 dark:border-emerald-500/30 hover:border-emerald-500/50'
+                : 'bg-[#FAFAF8] dark:bg-[#1C1D21] text-[#6B6D70] dark:text-[#A0A2A5] border-[#202124]/15 dark:border-white/15 hover:border-[#202124]/30 dark:hover:border-white/30'
+            }`}
+          >
+            {isPlaying ? (
+              <>
+                <Volume2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              </>
+            ) : (
+              <VolumeX className="w-4 h-4" />
+            )}
+          </button>
 
           {/* Accessible Theme Toggle */}
           <button
@@ -244,8 +271,30 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           </button>
         </div>
 
-        {/* Mobile Menu Trigger & Theme Toggle */}
+        {/* Mobile Menu Trigger, Music Toggle & Theme Toggle */}
         <div className="flex md:hidden items-center gap-2">
+          {/* Mobile Music Toggle */}
+          <button
+            type="button"
+            onClick={toggleMusic}
+            title={isPlaying ? 'Pause background music' : 'Play background music'}
+            aria-label={isPlaying ? 'Pause background music' : 'Play background music'}
+            className={`relative p-2.5 rounded-xl border transition-all cursor-pointer active:scale-95 ${
+              isPlaying
+                ? 'bg-[#FAFAF8] dark:bg-[#1C1D21] text-emerald-600 dark:text-emerald-400 border-emerald-500/30 dark:border-emerald-500/30'
+                : 'bg-[#FAFAF8] dark:bg-[#1C1D21] text-[#6B6D70] dark:text-[#A0A2A5] border-[#202124]/15 dark:border-white/15'
+            }`}
+          >
+            {isPlaying ? (
+              <>
+                <Volume2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              </>
+            ) : (
+              <VolumeX className="w-4 h-4" />
+            )}
+          </button>
+
           <button
             type="button"
             onClick={toggleTheme}
@@ -312,6 +361,27 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                     </a>
                   );
                 })}
+
+                {/* Mobile Drawer Music Toggle */}
+                <button
+                  type="button"
+                  onClick={toggleMusic}
+                  className={`min-h-[44px] px-4 rounded-xl text-sm font-semibold flex items-center justify-between transition-colors cursor-pointer ${
+                    isPlaying
+                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                      : 'text-[#202124] dark:text-[#FAFAF8] hover:bg-[#E9E8E4] dark:hover:bg-[#1C1D21]'
+                  }`}
+                >
+                  <span className="flex items-center gap-2.5">
+                    {isPlaying ? <Volume2 className="w-4 h-4 text-emerald-500" /> : <VolumeX className="w-4 h-4 opacity-70" />}
+                    <span>Background Audio</span>
+                  </span>
+                  <span className={`text-[11px] px-2 py-0.5 rounded font-mono font-medium uppercase tracking-wider ${
+                    isPlaying ? 'bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' : 'bg-black/5 dark:bg-white/10 text-[#6B6D70] dark:text-[#A0A2A5]'
+                  }`}>
+                    {isPlaying ? 'ON' : 'OFF'}
+                  </span>
+                </button>
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, '#contact')}
