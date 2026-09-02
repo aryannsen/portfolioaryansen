@@ -1,0 +1,130 @@
+{
+  "personal": {
+    "name": "Aryan Sen",
+    "title": "Second-Year B.Tech IT Student & Learning Web Developer",
+    "tagline": "Learning • Building • Growing",
+    "university": "Gujarat Technological University (GTU)",
+    "previousUniversity": "Chandigarh University",
+    "degree": "Bachelor of Technology in Information Technology",
+    "expectedGraduation": "2029",
+    "currentYear": "2nd Year",
+    "location": "Gujarat, India",
+    "phone": "+91 7206510712",
+    "email": "aryansenn123@gmail.com",
+    "instagram": "@aryannsen",
+    "instagramUrl": "https://www.instagram.com/aryannsen/",
+    "linkedin": "Aryan Sen on LinkedIn",
+    "linkedinUrl": "https://www.linkedin.com/in/aryannsen/",
+    "github": "Aryan on GitHub",
+    "resume": "Available upon request / downloadable via resume button on website"
+  },
+  "summary": "Aryan is a passionate second-year B.Tech Information Technology student at Gujarat Technological University (GTU). He is dedicated to mastering web development, data structures, and AI tools while building practical, user-focused applications. He has a disciplined background preparing for the NDA and serving in the Army Wing NCC.",
+  "quickStats": {
+    "projectsBuilt": "8+",
+    "certificates": "5+",
+    "techfestCAPoints": "200+",
+    "githubRepositories": "10+"
+  },
+  "techStack": [
+    { "name": "HTML", "category": "Frontend", "description": "Semantic structure and accessible markup" },
+    { "name": "CSS", "category": "Styling", "description": "Flexbox, CSS Grid, responsive design, and Tailwind CSS" },
+    { "name": "JavaScript", "category": "Programming", "description": "ES6+, DOM manipulation, async programming, and API integration" },
+    { "name": "Python", "category": "Programming", "description": "Scripting, logic building, and problem-solving" },
+    { "name": "Git & GitHub", "category": "Tools", "description": "Version control, repository management, and project sharing" },
+    { "name": "VS Code", "category": "Tools", "description": "Code editing, extension workflows, and debugging" },
+    { "name": "Figma", "category": "Design", "description": "UI layout design, visual wireframing, and component prototyping" },
+    { "name": "AI Tools", "category": "AI Workflows", "description": "Google AI Studio, Gemini API, prompt engineering, and rapid prototyping" },
+    { "name": "React", "category": "Framework", "description": "Component architecture, hooks, and responsive web applications" }
+  ],
+  "currentlyWorkingOn": [
+    "Learning Data Structures & Algorithms (DSA)",
+    "Building Full Responsive Web Applications",
+    "Exploring AI Development & LLM Integration",
+    "Improving Problem Solving Capabilities",
+    "Preparing for Tech Internship Opportunities"
+  ],
+  "projects": [
+    {
+      "id": "smart-lost-and-found",
+      "title": "Smart Lost & Found System",
+      "category": "Web Development / Full-Stack Concept",
+      "year": "2024",
+      "summary": "A web-based platform designed to help users report, search, and manage lost and found items in an organized and accessible way.",
+      "challenge": "Lost items in institutions are often tracked informally in unorganized chat groups.",
+      "solution": "Built a clean web interface with category filtering, item status tags, search bars, and reporting forms.",
+      "tools": ["HTML", "CSS", "JavaScript", "Responsive UI"]
+    },
+    {
+      "id": "cybercore-landing-page",
+      "title": "CyberCore Landing Page",
+      "category": "Frontend UI / Interactive Design",
+      "year": "2024",
+      "summary": "A futuristic, cyber-inspired landing page created to practice modern layouts, responsive design, and smooth interactions.",
+      "solution": "Developed a sleek dark theme page showcasing CSS Flexbox/Grid, semantic HTML, and interactive card layouts.",
+      "tools": ["HTML5", "CSS3", "JavaScript", "Responsive Design"]
+    },
+    {
+      "id": "personal-portfolio",
+      "title": "Personal Portfolio Website",
+      "category": "Web Portfolio / Personal Branding",
+      "year": "2026",
+      "summary": "A modern, minimalist digital portfolio built with React, Tailwind CSS, and Framer Motion featuring a Developer Hub and Aryan AI assistant.",
+      "solution": "Created an interactive React application documenting projects, journey milestones, certifications, and developer stats.",
+      "tools": ["React", "TypeScript", "Tailwind CSS", "Motion", "Vite", "Express", "Gemini API"]
+    },
+    {
+      "id": "student-task-manager",
+      "title": "Student Task Manager",
+      "category": "Productivity App",
+      "year": "2024",
+      "summary": "A student-focused web application designed to organize assignments, tasks, deadlines, and daily study goals in one interface.",
+      "tools": ["JavaScript", "HTML", "CSS", "Local State"]
+    },
+    {
+      "id": "weather-dashboard",
+      "title": "Weather Dashboard Concept",
+      "category": "API Learning / Frontend App",
+      "year": "2024",
+      "summary": "A weather dashboard displaying real-time weather metrics, temperatures, and location forecasts.",
+      "tools": ["JavaScript", "REST APIs", "CSS Flexbox"]
+    },
+    {
+      "id": "ai-study-assistant",
+      "title": "AI Study Assistant Concept",
+      "category": "AI Tools / Student Utility",
+      "year": "2025",
+      "summary": "A web app concept designed to help organize study topics, generate flashcards, and improve study productivity using AI.",
+      "tools": ["React", "Google AI Studio", "Tailwind CSS"]
+    }
+  ],
+  "journey": [
+    { "year": "2022", "title": "Started NDA Preparation", "description": "Began preparing for the National Defence Academy, building discipline, resilience, and physical fitness." },
+    { "year": "2022–2024", "title": "Army Wing NCC Cadet", "description": "Served in the National Cadet Corps (Army Wing), developing teamwork, leadership, discipline, and patriotism." },
+    { "year": "April 2024", "title": "Qualified NDA Written Examination", "description": "Cleared the NDA Written Examination and appeared for the Stage I SSB Interview." },
+    { "year": "Mid 2024", "title": "Joined Chandigarh University", "description": "Began B.Tech studies and explored career opportunities in computer science." },
+    { "year": "2025", "title": "Joined Gujarat Technological University (GTU)", "description": "Transferred to GTU to pursue B.Tech in IT with a laser focus on software engineering." },
+    { "year": "2025", "title": "Started Coding Journey", "description": "Learned HTML, CSS, JavaScript, Python, Git, and GitHub while building hands-on projects." },
+    { "year": "2026", "title": "Building Projects & Exploring AI", "description": "Developing modern web apps, mastering React, and integrating AI into software workflows." },
+    { "year": "Future", "title": "Aspiring Full-Stack Developer", "description": "Aiming to become a skilled Full-Stack Engineer and build impactful software solutions." }
+  ],
+  "certificates": [
+    { "title": "Web Development Learning Milestones", "issuer": "Coursework & Self-Study", "status": "Completed & Ongoing" },
+    { "title": "AI & Technology Workflows", "issuer": "Self-Paced Exploration & Google AI Studio", "status": "Completed" },
+    { "title": "Technical Events & Workshops", "issuer": "Gujarat Technological University (GTU)", "status": "Active" },
+    { "title": "Project Milestones & Showcase", "issuer": "Personal Portfolio", "status": "Growing Collection" }
+  ],
+  "faq": [
+    {
+      "question": "What is Aryan's educational background?",
+      "answer": "Aryan is currently pursuing his B.Tech in Information Technology (2nd Year) at Gujarat Technological University (GTU). Previously, he studied at Chandigarh University in 2024."
+    },
+    {
+      "question": "How can I contact Aryan?",
+      "answer": "You can reach Aryan by phone at +91 7206510712, email at aryansenn123@gmail.com, on Instagram @aryannsen, or on LinkedIn at linkedin.com/in/aryannsen/."
+    },
+    {
+      "question": "Is Aryan open to internships?",
+      "answer": "Yes! Aryan is actively preparing for tech internship opportunities in web development, software engineering, and frontend/full-stack development."
+    }
+  ]
+}
